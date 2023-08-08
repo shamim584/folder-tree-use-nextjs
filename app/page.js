@@ -1,95 +1,54 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFolderOpen, faFile
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <div className={styles.tree}>
+        <ul className={styles.ul}>
+          <li className={styles.li}> Project
+            <ul className={styles.ul}>
+              {/* <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> .git <span className={styles.span}>- asdf</span>
+                    <ul className={styles.ul}>
+                      <li className={styles.li}> css
+                        <ul className={styles.ul}>
+                          <li className={styles.li}> CSS Files <span className={styles.span}>- asdcf</span>
+                          </li>
+
+                        </ul>
+                      </li>
+                      <li className={styles.li}> Folder close <span className={styles.span}>- asdf</span>
+                      </li>
+                      <li className={styles.li}> index.html</li>
+                      <li className={styles.li}> favicon.ico</li>
+                    </ul> 
+                  </li> */}
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> app <span className={styles.span}>-  use folders to define routes, and the files inside these folders are used to define the UI.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> node_modules <span className={styles.span}>- provide a way to re-use code in your Node application.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> public <span className={styles.span}>- Static assets to be served</span></li>
+              {/* <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> src <span className={styles.span}>- Optional application source folder</span></li> */}
+              {/* <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> .eslintrc <span className={styles.span}>- Next.js provides an integrated ESLint experience out of the box.</span></li> */}
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> .gitignore <span className={styles.span}>- to ensure that certain files not tracked by Git remain untracked.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> jsconfig <span className={styles.span}>- Next.js allows us to use this file to identify the root files and perform path mapping needed for absolute imports.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> next.config <span className={styles.span}>- Next.js can be configured through a next.config.js file in the root of your project directory.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> package <span className={styles.span}>- Project dependencies and scripts</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> package-lock <span className={styles.span}>- ensures that the dependencies installed can not be modified.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> README <span className={styles.span}>- a guide that gives users a detailed description of a project you have worked on.</span></li>
+
+
+
+
+            </ul>
+          </li>
+        </ul>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   )
 }
