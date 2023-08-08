@@ -3,7 +3,7 @@ import styles from './page.module.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFolderOpen, faFile
+  faFolderOpen, faFile, faFolder
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
@@ -28,9 +28,18 @@ export default function Home() {
                       <li className={styles.li}> favicon.ico</li>
                     </ul> 
                   </li> */}
-              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> app <span className={styles.span}>-  use folders to define routes, and the files inside these folders are used to define the UI.</span></li>
-              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> node_modules <span className={styles.span}>- provide a way to re-use code in your Node application.</span></li>
-              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> public <span className={styles.span}>- Static assets to be served</span></li>
+
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> app <span className={styles.span}>- use folders to define routes, and the files inside these folders are used to define the UI.</span>
+                <ul className={styles.ul}>
+                  <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolder} /> Components <span className={styles.span}>- This is different from the "Components" directory, where any file in pages is considered a route.</span></li>
+
+                </ul>
+              </li>
+
+
+
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolder} /> node_modules <span className={styles.span}>- provide a way to re-use code in your Node application.</span></li>
+              <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolder} /> public <span className={styles.span}>- Static assets to be served</span></li>
               {/* <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFolderOpen} /> src <span className={styles.span}>- Optional application source folder</span></li> */}
               {/* <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> .eslintrc <span className={styles.span}>- Next.js provides an integrated ESLint experience out of the box.</span></li> */}
               <li className={styles.li}> <FontAwesomeIcon className={styles.faSize} icon={faFile} /> .gitignore <span className={styles.span}>- to ensure that certain files not tracked by Git remain untracked.</span></li>
